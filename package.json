@@ -1,0 +1,19 @@
+{
+  "name": "pug-inmemory",
+  "version": "1.0.0",
+  "description": "In-memory pug files",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeffcogswell/pug-inmemory.git"
+  },
+  "author": "Jeff Cogswell",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jeffcogswell/pug-inmemory/issues"
+  },
+  "homepage": "https://github.com/jeffcogswell/pug-inmemory#readme"
+}
