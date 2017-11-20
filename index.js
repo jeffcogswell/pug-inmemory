@@ -8,7 +8,7 @@ function regExpEscape(literal_string) {
 	return literal_string.replace(/[-[\]{}()*+!<=:?.\/\\^$|#\s,]/g, '\\$&');
 }
 
-module.exports = function (pluginOpts) {
+var plugin = function (pluginOpts) {
 	if (!pluginOpts) {
 		pluginOpts = {};
 	}
@@ -20,7 +20,8 @@ module.exports = function (pluginOpts) {
 	if (self.pluginOptions.memoryPath) {
 		self.pluginOptions._mpathRegexp = new RegExp('^' + regExpEscape(self.pluginOptions.memoryPath));
 	}
-	return {
+	this.pluginObj = 
+	{
 		name: 'stringFiles',
 /*		resolve: function (filename, source, options) {
 			return filename;
@@ -78,3 +79,10 @@ module.exports = function (pluginOpts) {
 		}
 	};
 };
+
+plugin.prototype.getOptions = function() {
+	console.log(this);
+	return this.pluginOptions;
+}
+
+module.exports = plugin;
