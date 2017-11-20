@@ -1,7 +1,6 @@
 // based on https://github.com/gryphonmyers/pug-multiple-basedirs-plugin/blob/master/index.js
 var fs = require('fs');
 var path = require('path');
-//var pug = require('pug');
 
 // Regexp escaper. See https://stackoverflow.com/questions/3561493/is-there-a-regexp-escape-function-in-javascript
 function regExpEscape(literal_string) {
@@ -81,7 +80,6 @@ var plugin = function (pluginOpts) {
 };
 
 plugin.prototype.getOptions = function() {
-	console.log(this);
 	return this.pluginOptions;
 }
 
